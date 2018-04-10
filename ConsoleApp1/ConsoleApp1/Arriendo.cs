@@ -10,37 +10,26 @@ namespace ConsoleApp1
     {
         Cliente cliente;
         Vehiculo vehiculo;
+        Sucursal sucursal;
         Accesorios accesorio;
-        DateTime fecha;
+        DateTime fechaInicio;
+        DateTime fechaFinal;
         int Total;
 
-        public Arriendo(Cliente cliente, Vehiculo vehiculo, Accesorios accesorio, DateTime fecha, int total)
+        public Arriendo(Cliente cliente, Vehiculo vehiculo, Sucursal sucursal, Accesorios accesorio, DateTime fechaInicio, DateTime fechaFinal, int total)
         {
             this.cliente = cliente;
             this.vehiculo = vehiculo;
+            this.sucursal = sucursal;
             this.accesorio = accesorio;
-            this.fecha = fecha;
+            this.fechaInicio = fechaInicio;
+            this.fechaFinal = fechaFinal;
             Total = total;
         }
-        public Cliente clientes
+        public void Rent(Sucursal sucursal, Cliente cliente, Vehiculo vehiculo, Accesorios accesorios, DateTime fechaInicio, DateTime fechaFinal)
         {
-            get { return cliente; }
-            set { cliente = value; }
+            int costo = Accesorios.precio + Vehiculo.precio;
         }
-        public Vehiculo vehiculos
-        {
-            get { return vehiculo; }
-            set { vehiculo = value; }
-        }
-        public Accesorios accesorios
-        {
-            get { return accesorio; }
-            set { accesorio = value; }
-        }
-        public DateTime fechas
-        {
-            get { return fecha; }
-            set { fecha = value; }
-        }
+
     }
 }

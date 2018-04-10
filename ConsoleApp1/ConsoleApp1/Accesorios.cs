@@ -8,6 +8,8 @@ namespace ConsoleApp1
 {
     public class Accesorios
     {
+        internal static int precio;
+
         public enum accesorios
         {
             RadioBluetooth,

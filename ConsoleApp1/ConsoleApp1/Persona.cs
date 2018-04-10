@@ -6,28 +6,28 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    public class Persona: Vehiculo
+    public class Persona
     {
         String Licencia;
-        private string licencia;
+        private Vehiculo licencia;
         Vehiculo vehiculo;
         String TipoLicencia;
         private Vehiculo tipolicencia;
 
-        public Persona(string licencia, Vehiculo vehiculo, string tipoLicencia)
+        public Persona(string licencia, Vehiculo vehiculo, string tipoLicencia, Vehiculo tipolicencia)
         {
             Licencia = licencia;
             this.vehiculo = vehiculo;
             TipoLicencia = tipoLicencia;
+            this.tipolicencia = tipolicencia;
         }
-        public String licencias
+        public bool RevisarLicencia()
         {
-            get { return licencia; }
-            set
+            if(licencia == tipolicencia)
             {
-                if (tipolicencia == vehiculo)
-                licencia = vehiculo;
+                return true;
             }
+            return false;
         }
     }
 }

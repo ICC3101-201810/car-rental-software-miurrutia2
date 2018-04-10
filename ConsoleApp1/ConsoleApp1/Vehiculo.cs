@@ -8,27 +8,18 @@ namespace ConsoleApp1
 {
     public class Vehiculo
     {
-        public enum Tipos
-        {
-            Auto,
-            Acuatico,
-            Moto,
-            Camion,
-            Bus,
-            MaquinariaPesada,
-        }
-        static void main()
-        {
-            Tipos tipos = Tipos.Auto | Tipos.Acuatico | Tipos.Moto | Tipos.Camion | Tipos.Bus | Tipos.MaquinariaPesada;
+        internal static int precio;
+        int año;
+        String Modelo;
+        String Marca;
+        int Precio;
 
-            Console.WriteLine(tipos);
-            Console.ReadKey();
-
-        }
-
-        public static implicit operator string(Vehiculo v)
+        public Vehiculo(int año, string modelo, string marca, int precio)
         {
-            throw new NotImplementedException();
+            this.año = año;
+            Modelo = modelo;
+            Marca = marca;
+            Precio = precio;
         }
     }
 }
