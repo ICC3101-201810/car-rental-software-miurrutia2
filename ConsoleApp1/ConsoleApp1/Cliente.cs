@@ -17,7 +17,6 @@ namespace ConsoleApp1
         public Cliente(Persona persona, string licencia, Vehiculo vehiculo, string tipoLicencia, string empresa, string organizacion, string institucion) : base(licencia, vehiculo, tipoLicencia)
         {
             this.persona = persona;
-            Empresa = empresa;
             Organizacion = organizacion;
             Institucion = institucion;
             Licencia = licencia;
