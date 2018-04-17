@@ -18,7 +18,6 @@ namespace ConsoleApp1
         {
             this.cliente = cliente;
             this.vehiculo = vehiculo;
-            this.accesorio = accesorio;
             this.fechaInicio = fechaInicio;
             this.fechaFinal = fechaFinal;
             
